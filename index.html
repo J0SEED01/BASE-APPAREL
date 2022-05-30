@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Apparel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="main">
+        <div class="main__base base--data">
+            <img src="images/logo.svg" alt="header-logo" class="base__header">
+            <article class="data__apparel">
+                <h1 class="apparel__title"><span>we're</span> coming soon</h1>
+                <p class="apparel__paragraph">Hellow fellow shoppers! We're currently building our new fashion store. Add you email below to stay up-to-date with announcements and our launch deals.</p>
+                <form class="apparel__form">
+                    <input class="form__input" type="email" name="email" title="Ingrese un email valido" placeholder="Email Address" required>
+                    <img src="images/icon-error.svg" alt="icon-error" class="form__error form--none">
+                    <button class="form__submit"> <img src="images/icon-arrow.svg" alt="icon-arrow" class="submit__img"> </button>
+                    <p class="form__paragraph form--none">Please provide a valid email</p>
+                    <div class="form__processing form">
+                        <h3 class="processing__sending form--none">Processing form .....</h3>
+                        <img src="images/circle.svg" alt="circle-prossesing" class="processing__img form--none">
+                        <h3 class="processing__excelent form--none">Form successfully submitted ...!</h3>
+                    </div>
+                </form>
+            </article>
+        </div>
+        <figure class="main__base base--img">
+            <img src="images/hero-desktop.jpg" alt="hero-desktop" class="hero--desktop">
+            <img src="images/hero-mobile.jpg" alt="hero-mobile" class="hero--mobile">
+        </figure>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+- Weights: 300, 400, 600
+
+*/
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+body{
+    height: 100vh;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    overflow: hidden;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%),  hsl(0, 100%, 98%));
+}
+
+.form--none{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hero--mobile{
+    display: none;
+}
+
+.main{
+    height: inherit;
+    display: flex;
+}
+
+.base--data{
+    width: 60%;
+    padding: 75px 150px;
+}
+
+.data__apparel{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.apparel__title {
+    color:  hsl(0, 6%, 24%);
+    font-weight: 600;
+    width: 400px;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    margin-bottom: 20px;
+}
+
+.apparel__title span{
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+.apparel__paragraph{
+    color: hsl(0, 36%, 70%);
+    font-weight: 400;
+    width: 425px;
+    margin-bottom: 30px;
+}
+
+.apparel__form{
+    position: relative;
+    width: 420px;
+    height: 150px;
+}
+
+.form__input,
+.form__error,
+.form__submit,
+.form__paragraph,
+.form__processing,
+.processing__sending,
+.processing__img,
+.processing__excelent{
+    position: absolute;
+}
+
+.form__input {
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: inherit;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid hsl(0, 36%, 70%);
+}
+
+.form__error {
+    z-index: 200;
+    right: 25%;
+    top: 7px;
+}
+
+.form__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    right: -5px;
+    background-image: linear-gradient(135deg ,hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 3px solid hsl(0, 36%, 70%);
+    transition: background-color 1s ease 0s;
+}
+
+.form__paragraph {
+    top: 50px;
+    left: 30px;
+    color: hsl(0, 93%, 68%);
+}
+
+.form__paragraph{
+    width: 420px;    
+}
+
+.form__processing{
+    width: 420px;
+    text-align: center;
+    color: hsl(0, 74%, 74%);
+}
+
+.processing__sending {
+    width: inherit;
+    top: 40px;
+}
+
+
+.processing__img{
+    filter: brightness(0) saturate(100%) invert(79%) sepia(76%) saturate(916%) hue-rotate(301deg) brightness(99%) contrast(88%);
+    width: 50px;
+    top: 90px;
+    left: 170px;
+}
+
+.processing__excelent {
+    top: 40px;
+    width: inherit;
+    font-size: 20px;
+  }
+
+.base--img{
+    width: 40%;
+}
+
+.base--img .hero--desktop{
+    width: 100%;
+    height: 100%;
+}
+
+@media (hover: hover){
+    .form__submit:hover{
+        background-image: none;
+        background-color: hsl(0, 80%, 90%);
+        border-color: hsl(0, 80%, 90%);
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .base--data{
+        padding: 75px 100px;
+    }
+    
+}
+
+@media only screen and (max-width: 950px){
+    .base--data{
+        padding: 75px 50px;
+    }
+
+
+    .apparel__form,
+    .apparel__paragraph{
+        width: 380px;
+    }
+
+  
+    
+}
+
+@media only screen and (max-width: 800px){
+
+    body{
+        overflow: hidden auto;
+        height: auto;
+    }
+
+    .main{
+        height: inherit;
+        position: relative;
+        flex-direction: column;
+    }
+
+   
+
+    .base__header{
+        position: absolute;
+        left: 5%;
+        top: 5%;
+    }
+
+    .base--data{
+        padding: 50px 0;
+    }
+
+    .base--data,
+    .base--img{
+        width: 100%;
+    }
+
+    .base--img{
+        order: -1;
+        margin-top: 120px;
+    }
+
+    .base--img .hero--mobile{
+        display: block;
+        width: 100%;
+    }
+
+    .hero--desktop{
+        display: none;
+    }
+
+    .data__apparel{
+        padding: 0;
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    
+    .form__paragraph{
+        left: -25%;
+    }
+    
+
+
+}
+
+@media only screen and (max-width: 500px){
+   
+    .base--data{
+        padding: 50px 0;
+    }
+
+
+    .apparel__title{
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .apparel__paragraph{
+        width: 300px;
+    }
+
+    .apparel__form{
+        width: 300px;
+    }
+
+    .form__error{
+        right: 18%;
+    }
+
+    .form__submit{
+        right: -10%;
+    }
+
+    .form__processing{
+        width: 300px;
+    }
+
+    .processing__img{
+        left: 130px;
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+    .apparel__title{
+        letter-spacing: 15px;
+    }
+
+    .apparel__paragraph{
+        width: 250px;
+    }
+
+    .apparel__form{
+        width: 250px;
+    }
+
+    .form__error{
+        top: 45px;
+        left: 0;
+    }
+
+    .form__submit{
+        padding: 10px 15px;
+    }
+    .form__processing{
+        width: 250px;
+    }
+
+    .processing__img{
+        left: 100px;
+    }
+
+}
+
+.form--active{
+    visibility: visible;
+    opacity: 1;
+}
+
